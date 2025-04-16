@@ -20,7 +20,7 @@ function Signup() {
     // console.log(name,email,role,password)
     try{
        const res = await axios.post(
-        "http://localhost:3010/api/auth/signup",{
+        `${import.meta.env.VITE_API_URL}/api/auth/signup`,{
           name,
           email,
           role,
@@ -89,7 +89,7 @@ function Signup() {
                   console.log("Decoded User Info:", decoded);
 
                   // Send token to backend
-                  const res = await axios.post("http://localhost:3010/api/auth/google", {
+                  const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/google`, {
                     token: credentialResponse.credential
                   }, { withCredentials: true });
 

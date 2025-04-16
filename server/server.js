@@ -13,7 +13,7 @@ connectDB();
 app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
-    origin: "http://localhost:5173",  // Change this to your frontend URL
+    origin: process.env.CLIENT_URL, // Change this to your frontend URL
     credentials: true,                // Allow credentials (cookies, tokens)
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],  
     allowedHeaders: ["Content-Type", "Authorization"]

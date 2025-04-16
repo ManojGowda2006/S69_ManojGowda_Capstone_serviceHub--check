@@ -7,7 +7,7 @@ const AdminInquiriesPage = () => {
 
   useEffect(() => {
     const fetch = async () => {
-      const res = await axios.get("http://localhost:3010/api/recievePro", {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}api/recievePro`, {
         withCredentials: true,
       });
       setProfessionals(res.data);
@@ -18,7 +18,7 @@ const AdminInquiriesPage = () => {
   const handleAccept = async(id) => {
     console.log(id)
     const res = await axios.patch(
-      "http://localhost:3010/api/approvePro",{
+      `${import.meta.env.VITE_API_URL}api/approvePro`,{
         professionalId : id
       },{
         withCredentials: true

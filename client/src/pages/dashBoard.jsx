@@ -17,7 +17,7 @@ const App = () => {
    useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:3010/api/user", {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/user`, {
           withCredentials: true
         });
         console.log(res.data);

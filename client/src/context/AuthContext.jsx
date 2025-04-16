@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:3010/api/user", { withCredentials: true });
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/user`, { withCredentials: true });
         setUser(res.data); // Store user data
       } catch (err) {
         console.error("User fetch error:", err);

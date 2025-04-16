@@ -19,7 +19,7 @@ function Login() {
     
     try {
       const response = await axios.post(
-        "http://localhost:3010/api/auth/login",
+        `${import.meta.env.VITE_API_URL}/api/auth/login`,
         { email, password },  
         { headers: { "Content-Type": "application/json" }, withCredentials: true }
       );
@@ -78,7 +78,7 @@ function Login() {
                   console.log("Decoded User Info:", decoded);
 
                   // Send token to backend
-                  const res = await axios.post("http://localhost:3010/api/auth/google", {
+                  const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/google`, {
                     token: credentialResponse.credential
                   }, { withCredentials: true });
 

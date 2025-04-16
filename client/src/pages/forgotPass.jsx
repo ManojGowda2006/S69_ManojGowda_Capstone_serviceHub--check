@@ -15,7 +15,7 @@ function ForgotAndResetPassword() {
 
   const sendOtp = async () => {
     try {
-      const res = await axios.post("http://localhost:3010/api/auth/resetOtp", { email }, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/resetOtp`, { email }, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true
       });
@@ -32,7 +32,7 @@ function ForgotAndResetPassword() {
   const handleReset = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3010/api/auth/reset-password", {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/reset-password`, {
         email,
         otp,
         newPassword

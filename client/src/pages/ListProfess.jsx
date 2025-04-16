@@ -17,7 +17,7 @@ const ProfessionalsList = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3010/api/professionals/category?category=${encodeURIComponent(title)}`,
+          `${import.meta.env.VITE_API_URL}/api/professionals/category?category=${encodeURIComponent(title)}`,
           { withCredentials: true }
         );
         setProfessionals(res.data)

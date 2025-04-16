@@ -15,7 +15,7 @@ const ProfileCard = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:3010/api/user", {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/user`, {
           withCredentials: true,
         });
         console.log(res.data)
@@ -33,7 +33,7 @@ const ProfileCard = () => {
 
   const handleEditData = async () => {
     try {
-      const res = await axios.put("http://localhost:3010/api/user-update", editData, {
+      const res = await axios.put(`${import.meta.env.VITE_API_URL}/api/user-update`, editData, {
         withCredentials: true,
       });
       console.log(res.data);
@@ -46,7 +46,7 @@ const ProfileCard = () => {
 
   const handleDelete = async () => {
     try {
-      const res = await axios.delete("http://localhost:3010/api/delete", {
+      const res = await axios.delete(`${import.meta.env.VITE_API_URL}/api/delete`, {
         withCredentials: true,
       });
       if (res.status === 200) {
