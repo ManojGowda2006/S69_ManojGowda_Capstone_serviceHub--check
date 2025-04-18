@@ -7,7 +7,7 @@ const AdminInquiriesPage = () => {
 
   useEffect(() => {
     const fetch = async () => {
-      const res = await axios.get(`${import.meta.env.VITE_API_URL}api/recievePro`, {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/recievePro`, {
         withCredentials: true,
       });
       setProfessionals(res.data);
