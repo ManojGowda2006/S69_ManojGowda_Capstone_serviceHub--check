@@ -198,6 +198,7 @@ function Register() {
             ></textarea>
             <select
               value={data.category}
+              name="category"
               onChange={(e) => setData((prev) => ({ ...prev, category: e.target.value }))}
               className="p-2 text-center rounded-md border border-gray-300 bg-white text-black h-10 text-sm"
             >
