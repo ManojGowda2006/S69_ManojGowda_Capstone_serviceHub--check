@@ -110,24 +110,28 @@ function Register() {
             type="text"
             onChange={(e) => setData((prev) => ({ ...prev, fullName: e.target.value }))}
             placeholder="Name"
+            name="name"
             className="p-3 rounded-md border border-gray-300 bg-white text-black col-span-1"
           />
           <input
             type="email"
             onChange={(e) => setData((prev) => ({ ...prev, email: e.target.value }))}
             placeholder="Email"
+            name="email"
             className="p-3 rounded-md border border-gray-300 bg-white text-black col-span-1"
           />
           <input
             type="text"
             onChange={(e) => setData((prev) => ({ ...prev, location: e.target.value }))}
             placeholder="Location"
+            name="location"
             className="p-3 rounded-md border border-gray-300 bg-white text-black col-span-1"
           />
           <input
             type="text"
             onChange={(e) => setData((prev) => ({ ...prev, phone: e.target.value }))}
             placeholder="Phone"
+            name="phone"
             className="p-3 rounded-md border border-gray-300 bg-white text-black col-span-1"
           />
 
@@ -156,6 +160,7 @@ function Register() {
 
           <textarea
             placeholder="Bio"
+            name="bio"
             onChange={(e) => setData((prev) => ({ ...prev, bio: e.target.value }))}
             className="p-3 rounded-md border border-gray-300 bg-white text-black col-span-1 h-20"
           ></textarea>
@@ -165,18 +170,21 @@ function Register() {
             type="text"
             onChange={(e) => setData((prev) => ({ ...prev, profession: e.target.value }))}
             placeholder="Profession"
+            name="profession"
             className="p-3 rounded-md border border-gray-300 bg-white text-black col-span-1"
           />
           <input
             type="text"
             onChange={(e) => setData((prev) => ({ ...prev, experience: e.target.value }))}
             placeholder="Experience"
+            name="experience"
             className="p-3 rounded-md border border-gray-300 bg-white text-black col-span-1"
           />
           <input
             type="text"
             onChange={(e) => setData((prev) => ({ ...prev, availability: e.target.value }))}
             placeholder="Availability"
+            name="availability"
             className="p-3 rounded-md border border-gray-300 bg-white text-black col-span-1"
           />
 
@@ -185,6 +193,7 @@ function Register() {
             <textarea
               onChange={(e) => setData((prev) => ({ ...prev, servicesOffered: e.target.value }))}
               placeholder="Services Offered"
+              name="servicesOffered"
               className="p-3 rounded-md border border-gray-300 bg-white text-black col-span-2 h-24"
             ></textarea>
             <select
