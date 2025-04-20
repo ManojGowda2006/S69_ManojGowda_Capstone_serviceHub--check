@@ -18,7 +18,7 @@ const AdminInquiriesPage = () => {
   const handleAccept = async(id) => {
     console.log(id)
     const res = await axios.patch(
-      `${import.meta.env.VITE_API_URL}api/approvePro`,{
+      `${import.meta.env.VITE_API_URL}/api/approvePro`,{
         professionalId : id
       },{
         withCredentials: true
