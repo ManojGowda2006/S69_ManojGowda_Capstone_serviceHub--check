@@ -62,15 +62,14 @@ function Register() {
     }
   };
   
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (uploading) {
-      alert("Please wait for the image to finish uploading.");
-      return;
-    }
+    // if (uploading) {
+    //   alert("Please wait for the image to finish uploading.");
+    //   return;
+    // }
 
     try {
       const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/register`, data, {
