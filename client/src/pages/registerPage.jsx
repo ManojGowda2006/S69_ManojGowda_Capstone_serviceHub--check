@@ -67,7 +67,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!data.profilePicture) {
+    if (uploading) {
       alert("Please wait for the image to finish uploading.");
       return;
     }
