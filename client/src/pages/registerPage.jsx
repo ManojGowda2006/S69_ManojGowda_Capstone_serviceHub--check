@@ -110,7 +110,7 @@ function Register() {
             type="text"
             onChange={(e) => setData((prev) => ({ ...prev, fullName: e.target.value }))}
             placeholder="Name"
-            name="name"
+            name="fullName"
             className="p-3 rounded-md border border-gray-300 bg-white text-black col-span-1"
           />
           <input
