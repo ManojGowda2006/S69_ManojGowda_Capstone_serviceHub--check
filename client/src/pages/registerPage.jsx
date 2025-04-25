@@ -77,6 +77,7 @@ function Register() {
         withCredentials: true,
       });
       console.log("Response:", res.data);
+      navigate("/dashboard")
     } catch (err) {
       console.error("Error:", err.response?.data || err.message);
     }
